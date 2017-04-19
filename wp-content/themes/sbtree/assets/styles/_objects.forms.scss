@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $brown;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $brown;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $brown;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $brown;
+}
+
+label {
+  margin-top: $space;
+  width: 100%;
+  @include font--s;
+  color: $brown;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+input[type=text], input[type=email], input[type=tel], input[type=search], input[type=url], input[type=number], textarea {
+  width: 100%;
+  border: 1px solid $brown;
+  color: $white;
+  background-color: transparent;
+  &:focus {
+    border-color: $gold;
+  }
+}
+input[type=radio],
+input[type=checkbox] {
+  outline: none;
+  border: none;
+  margin: 0;
+  margin-right: rem(8);
+  height: rem(15);
+  width: rem(15);
+  line-height: rem(15);
+  background-size: rem(15);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  display: block;
+  float: left;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  background-color: $white;
+}
+input[type=radio],
+input[type=checkbox] {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $border-color;
+}
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+  background-color: $green;
+  box-shadow: inset 0 0 0 3px $white;
+}
+input[type=radio] + span,
+input[type=checkbox] + span {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type=radio] {
+  border-radius: rem(50);
+}
+
+input[type=submit] {
+  margin-top: $space;
+}
+form {
+  margin-top: $space-double;
+  br {
+    display: none;
+  }
+}

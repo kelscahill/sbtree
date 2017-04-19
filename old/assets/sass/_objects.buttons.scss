@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+.btn,
+button,
+input[type="submit"] {
+  @include font--secondary--m;
+  display: table;
+  padding:$pad-half $pad;
+  vertical-align: middle;
+  cursor: pointer;
+  color: $white;
+  background-color: $button-color;
+  box-shadow: none;
+  border: none;
+  @include transition;
+  @include media('>medium') {
+    padding:$pad-half $pad-and-half;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $button-hover;
+    color: $white;
+  }
+}

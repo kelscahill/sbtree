@@ -1,0 +1,10 @@
+[29-Jul-2016 03:11:36 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[29-Jul-2016 03:11:39 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 171
+[29-Jul-2016 03:11:45 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[29-Jul-2016 03:12:13 America/Denver] PHP Fatal error:  Call to undefined function add_filter() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[10-Oct-2016 18:53:31 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[10-Oct-2016 18:53:35 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[10-Oct-2016 18:53:36 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 171
+[13-Feb-2017 17:28:06 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[13-Feb-2017 17:28:10 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[13-Feb-2017 17:28:13 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/foxhillf/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 171

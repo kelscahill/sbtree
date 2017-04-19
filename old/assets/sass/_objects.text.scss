@@ -1,0 +1,179 @@
+/*------------------------------------*\
+    $TEXT TYPES
+\*------------------------------------*/
+/**
+ * Type styles
+ */
+
+// Text Primary
+@mixin font--primary--xxl() {
+  font-size: rem(40);
+  line-height: rem(43);
+  letter-spacing: -0.5px;
+  font-weight: 800;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(66);
+    line-height: rem(68);
+  }
+}
+h1, .font--primary--xxl {
+  @include font--primary--xxl;
+}
+
+@mixin font--primary--xl() {
+  font-size: rem(28);
+  line-height: rem(30);
+  font-weight: 800;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(52);
+    line-height: rem(60);
+  }
+}
+h2, .font--primary--xl {
+  @include font--primary--xl;
+}
+
+@mixin font--primary--l() {
+  font-size: rem(19);
+  line-height: rem(22);
+  font-weight: 700;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(30);
+    line-height: rem(38);
+  }
+}
+.font--primary--l {
+  @include font--primary--l;
+}
+
+@mixin font--primary--m() {
+  font-size: rem(16);
+  line-height: rem(20);
+  font-weight: 800;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(24);
+    line-height: rem(30);
+  }
+}
+h3, .font--primary--m {
+  @include font--primary--m;
+}
+
+@mixin font--primary--s() {
+  font-size: rem(18);
+  line-height: rem(22);
+  font-weight: 800;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(20);
+    line-height: rem(24);
+  }
+}
+.font--primary--s {
+  @include font--primary--s;
+}
+
+// Text Secondary
+@mixin font--secondary--m() {
+  font-size: rem(12);
+  line-height: rem(14);
+  font-weight: 700;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  @include media('>large') {
+    font-size: rem(16);
+    line-height: rem(18);
+  }
+}
+h4, .font--secondary--m {
+  @include font--secondary--m;
+}
+
+@mixin font--secondary--s() {
+  font-size: rem(11);
+  line-height: rem(13);
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  @include media('>large') {
+    font-size: rem(13);
+    line-height: rem(16);
+  }
+}
+h6, .font--secondary--s {
+  @include font--secondary--s;
+}
+
+// Text Main
+@mixin font--m() {
+  font-size: rem(15);
+  line-height: rem(20);
+  font-family: $font;
+  font-weight: 700;
+  @include media('>large') {
+    font-size: rem(18);
+    line-height: rem(22);
+  }
+}
+h5, .font--m {
+  @include font--m;
+}
+
+@mixin font--s() {
+  font-size: rem(12);
+  line-height: rem(18);
+  font-family: $font;
+  font-weight: 400;
+  @include media('>large') {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
+}
+.font--s {
+  @include font--s;
+}
+
+/**
+ * Text Transforms
+ */
+.text-transform--upper {
+  text-transform: uppercase;
+}
+.text-transform--lower {
+  text-transform: lowercase;
+}
+.text-transform--capitalize {
+  text-transform: capitalize;
+}
+
+/**
+ * Text Decorations
+ */
+.text-decoration--underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Font Weights
+ */
+.font-weight--400 {
+  font-weight: 400;
+}
+.font-weight--700 {
+  font-weight: 700;
+}
+.font-weight--800 {
+  font-weight: 800;
+}
+
+.letter-spacing--normal {
+  letter-spacing: 0.04em;
+}

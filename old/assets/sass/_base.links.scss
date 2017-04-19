@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  transition: all .6s ease-out;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $link-hover;
+  }
+  p {
+    color: $body-color;
+  }
+}
+
+a.icon {
+  .path-fill--pink {
+    path {
+      @include transition;
+    }
+  }
+  &:hover {
+    .path-fill--pink {
+      path {
+        fill: $dark-pink;
+      }
+    }
+  }
+}
+
+.background--purple {
+  a {
+    color: $pink;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}

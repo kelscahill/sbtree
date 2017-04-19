@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+/**
+ * Header Utility
+ */
+.header-utility {
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+}
+.header-utility--inner {
+  height: rem(35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    @include font--s;
+  }
+}
+.header-utility--left {
+  display: none;
+  @include media('>medium') {
+    display: block;
+  }
+}
+.header-utility--right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  @include media('>medium') {
+    justify-content: flex-end;
+    width: auto;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    &:last-child {
+      @include media('>medium') {
+        padding-left: $pad-double;
+      }
+    }
+  }
+  .icon {
+    margin-right: rem(5);
+  }
+}
+
+/**
+ * Header
+ */
+.header {
+  z-index: 10;
+  position: fixed;
+  top: rem(35);
+  width: 100%;
+  border-bottom: 1px solid $dark-gray;
+  background-color: rgba($black, 0.3);
+}
+.header__nav {
+  height: rem(50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media('>medium') {
+    height: rem(80);
+  }
+}
+.header__logo-link {
+  display: block;
+  width: rem(100);
+  @include media('>medium') {
+    width: rem(160);
+  }
+}

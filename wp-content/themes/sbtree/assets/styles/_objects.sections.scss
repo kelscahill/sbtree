@@ -1,0 +1,152 @@
+/*------------------------------------*\
+    $PAGE SECTIONS
+\*------------------------------------*/
+
+.banner {
+  display: block;
+  height: rem(500);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  @include media('>medium') {
+    height: rem(700);
+  }
+  &:after {
+    content: "";
+    background: url('../../dist/images/graphic-treeline.svg') bottom center repeat-x;
+    display: block;
+    width: 100%;
+    height: rem(200);
+    bottom: 0;
+    position: absolute;
+  }
+}
+.banner--inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.page-header {
+  flex-direction: column;
+  max-width: 80%;
+  @include media('>medium') {
+    max-width: 50%;
+  }
+  .icon--headline {
+    width: rem(300);
+    display: block;
+    margin: 0 auto $space auto;
+    @include media('>medium') {
+      width: rem(400);
+    }
+  }
+}
+
+.section--inner {
+  padding-top: $pad-quad;
+  padding-bottom: $pad-quad;
+}
+.section-about {
+  position: relative;
+  @include media('>large') {
+    top: rem(-20);
+  }
+}
+.section-services {
+  background: url('../../dist/images/background-texture.png') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  .grid {
+    min-height: rem(500);
+    &:before {
+      content: "";
+      display: block;
+      width: 200%;
+      height: 100%;
+      background-color: rgba($green, 0.8);
+      position: absolute;
+      transform: rotate(-15deg);
+      top: -50%;
+      left: -50%;
+      z-index: 1;
+      @include media('>medium') {
+        height: 200%;
+        width: 70%;
+        top: -75%;
+        left: -10%;
+        transform: rotate(30deg);
+      }
+      @include media('>large') {
+        width: 75%;
+        left: -22%;
+      }
+    }
+  }
+  .grid-item {
+    z-index: 2;
+    &:first-child {
+      .btn {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+          background-color: $gold;
+        }
+      }
+    }
+    &:last-child {
+      .btn {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+          background-color: $green;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.section-testimonials {
+  // background: url('../../dist/images/background-texture.png') center center no-repeat;
+  // background-size: cover;
+}
+
+.section-service--1,
+.section-service--2 {
+  position: relative;
+  padding-top: rem(300);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: rem(-800);
+    margin: auto;
+    width: rem(1600);
+    height: rem(1600);
+    transform: translateX(-50%) scaleY(.2) rotate(45deg);
+    z-index: -1;
+  }
+}
+.section-service--1 {
+  z-index: 2;
+  &:after {
+    background-color: $dark-gray;
+  }
+}
+.section-service--2 {
+  z-index: 1;
+  background-color: $green;
+  &:after {
+    background-color: $green;
+  }
+}

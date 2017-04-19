@@ -1,0 +1,134 @@
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+/**
+ * Simple grid - keep adding more elements to the row until the max is hit
+ * (based on the flex-basis for each item), then start new row.
+ */
+.grid {
+  display: flex;
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+/**
+ * Fixed Gutters
+ */
+@mixin column-gutters() {
+  padding-left: rem(gutter(mobile));
+  padding-right: rem(gutter(mobile));
+  @include media('>xlarge') {
+    padding-left: rem(gutter(desktop));
+    padding-right: rem(gutter(desktop));
+    &.left-gutter--l { padding-left: rem(30); }
+    &.right-gutter--l { padding-right: rem(30); }
+    &.left-gutter--xl { padding-left: rem(60); }
+    &.right-gutter--xl { padding-right: rem(60); }
+  }
+}
+
+[class*="grid--"] {
+  &.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+    > .grid-item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  > .grid-item {
+    @include column-gutters();
+    box-sizing: border-box;
+  }
+}
+
+@mixin layout-in-column {
+  margin-left: -1 * rem(gutter(mobile));
+  margin-right: -1 * rem(gutter(mobile));
+  @include media('>xlarge') {
+    margin-left: -1 * rem(gutter(desktop));
+    margin-right: -1 * rem(gutter(desktop));
+  }
+}
+
+[class*="grid--"] {
+  @include layout-in-column;
+}
+
+.grid-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid-item--full {
+  width: 100% !important;
+  text-align: center;
+}
+
+
+/**
+* 1 to 2 column grid at 50% each.
+*/
+.grid--50-50 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  > .grid-item {
+    padding-left: $pad-double;
+    padding-right: $pad-double;
+    &:last-child {
+      margin-top: $space-double;
+    }
+  }
+  @include media('>medium') {
+    > .grid-item {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+    .grid-item--inner {
+      max-width: rem(500);
+      margin: 0 auto;
+    }
+  }
+}
+
+
+/**
+ * 3 column grid
+ */
+.grid--3-col {
+  @include media('>medium') {
+    width: 100%;
+    > * {
+      width: 33.3333%;
+    }
+  }
+}
+
+/**
+ * 4 column grid
+ */
+.grid--4-col {
+  width: 100%;
+  @include media('>medium') {
+    > * {
+      width: 50%;
+    }
+  }
+  @include media('>large') {
+    > * {
+      width: 25%;
+    }
+  }
+}
+
+.grid--4-col-only {
+  > * {
+    width: 25%;
+  }
+}

@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $BLOCKS
+\*------------------------------------*/
+
+.testimonial {
+  border: 1px solid $brown;
+  padding: $pad-quad $pad-double;
+  text-align: center;
+  margin: $space;
+}
+
+.slick-dots {
+  text-align: center;
+  margin-top: $space;
+  li {
+    display: inline-block;
+    text-align: center;
+    button {
+      width: rem(10);
+      height: rem(10);
+      text-indent: 9999px;
+      border-radius: rem(50);
+      margin: rem(5);
+      overflow: hidden;
+      background-color: $brown;
+      padding: 0;
+    }
+
+    &.slick-active button {
+      background-color: $green;
+    }
+  }
+}

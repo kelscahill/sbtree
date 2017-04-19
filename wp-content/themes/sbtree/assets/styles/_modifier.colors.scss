@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    $COLOR MODIFIERS
+\*------------------------------------*/
+
+/**
+ * Text Colors
+ */
+.color--gray {
+  color: $gray;
+}
+.color--light-gray {
+  color: $gray-light;
+}
+.color--black {
+  color: $black;
+}
+.color--white {
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+}
+.color--brown {
+  color: $brown;
+}
+.color--dark-gray {
+  color: $dark-gray;
+}
+.color--tan {
+  color: $tan;
+}
+.color--green {
+  color: $green;
+}
+.color--gold {
+  color: $gold;
+}
+
+
+/**
+ * Background Colors
+ */
+.no-bg {
+  background: none;
+}
+.background--white {
+  background-color: $white;
+}
+.background--black {
+  background-color: $black;
+}
+.background--dark-gray {
+  background-color: $dark-gray;
+}
+.background--tan {
+  background-color: $tan;
+}
+.background--brown {
+  background-color: $brown;
+}
+.background--green {
+  background-color: $green;
+}
+
+
+/**
+ * Path Fills
+ */
+.path-fill--white {
+  path {
+    fill: $white;
+  }
+}
+.path-fill--black {
+  path {
+    fill: $black;
+  }
+}
+.path-fill--brown {
+  path {
+    fill: $brown;
+  }
+}
+.path-fill--gold {
+  path {
+    fill: $gold;
+  }
+}
+.path-fill--green {
+  path {
+    fill: $green;
+  }
+}
+.path-fill--tan {
+  path {
+    fill: $tan;
+  }
+}

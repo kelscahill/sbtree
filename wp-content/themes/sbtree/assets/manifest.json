@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/picturefill.js",
+        "scripts/plugins.js",
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "slick.js": {
+      "files": ["scripts/slick.min.js"]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "slick.css": {
+      "files": ["styles/vendor.slick.css"]
+    }
+  },
+  "config": {
+    "devUrl": "http://sbtree.dev/"
+  }
+}

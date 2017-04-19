@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  transition: all .6s ease-out;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $link-hover;
+  }
+  p {
+    color: $body-color;
+  }
+}

@@ -1,0 +1,25 @@
+{
+	"index": {
+		"mainClass": "front",
+		"metaTitle": "S&B Tree LLC. | Tree Maintenance Services | Lakeville, PA",
+		"metaKeywords": "tree maintenance services, lakeville, pa, pike county, wayne county, susquehanna county, tree trimming, tree removal, utility line clearning",
+		"metaDescription": "Contact us at (570) 878-8183 in Lakeville, PA, for tree maintenance services that beautify your lawn."
+	},
+	"services": {
+		"title": "Services",
+		"mainClass": "interior",
+		"metaTitle": "Services | S&B Tree LLC. | Tree Remomal & Tree Trimmoing | Wayne County, PA",
+		"metaKeywords": "tree removal, lakeville, pa, pike county, wayne county, northeast pa, nepa, tree services, tree trimming, utility line clearing, stump grinding",
+		"metaDescription": "Contact us at (570) 878-8183 in Lakeville, PA, for tree removal and tree trimming you can trust."
+	},
+	"contact": {
+		"title": "Contact",
+		"mainClass": "interior",
+		"metaTitle": "Contact | S&B Tree LLC. | Pike County, PA",
+		"metaKeywords": "tree trimming, yard cleanup, lakeville, pa, pike county, wayne county, northeast pa, tree services, tree removal",
+		"metaDescription": "Contact us at (570) 878-8183 in Lakeville, PA, for tree trimming and yard cleanup."
+	},
+	"sitemap": {
+		"layout": false
+	}
+}

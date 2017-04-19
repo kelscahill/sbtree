@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    $TEXT TYPES
+\*------------------------------------*/
+/**
+ * Type styles
+ */
+
+// Text Primary
+@mixin font--primary--xl() {
+  font-size: rem(35);
+  line-height: rem(35);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(70);
+    line-height: rem(70);
+  }
+}
+h1, .font--primary--xl {
+  @include font--primary--xl;
+}
+
+@mixin font--primary--l() {
+  font-size: rem(30);
+  line-height: rem(30);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(60);
+    line-height: rem(60);
+  }
+}
+h2, .font--primary--l {
+  @include font--primary--l;
+}
+
+@mixin font--primary--m() {
+  font-size: rem(20);
+  line-height: rem(24);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(30);
+    line-height: rem(38);
+  }
+}
+h3, .font--primary--m {
+  @include font--primary--m;
+}
+
+@mixin font--primary--s() {
+  font-size: rem(16);
+  line-height: rem(20);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: $font-primary;
+  @include media('>large') {
+    font-size: rem(25);
+    line-height: rem(30);
+  }
+}
+h4, .font--primary--s {
+  @include font--primary--s;
+}
+
+
+// Text Main
+@mixin font--m() {
+  font-size: rem(16);
+  line-height: rem(22);
+  font-family: $font;
+  font-weight: 400;
+  @include media('>large') {
+    font-size: rem(18);
+    line-height: rem(24);
+  }
+}
+.font--m {
+  @include font--m;
+}
+
+@mixin font--s() {
+  font-size: rem(12);
+  line-height: rem(18);
+  font-family: $font;
+  font-weight: 400;
+  @include media('>large') {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
+}
+.font--s {
+  @include font--s;
+}
+
+/**
+ * Text Transforms
+ */
+.text-transform--upper {
+  text-transform: uppercase;
+}
+.text-transform--lower {
+  text-transform: lowercase;
+}
+.text-transform--capitalize {
+  text-transform: capitalize;
+}
+
+/**
+ * Text Decorations
+ */
+.text-decoration--underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Font Weights
+ */
+.font-weight--400 {
+  font-weight: 400;
+}
+.font-weight--700 {
+  font-weight: 700;
+}
+.font-weight--800 {
+  font-weight: 800;
+}

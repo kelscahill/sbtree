@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- partial("_partials/_head") %>
+  <body id="top">
+    <div class="content cf" role="document">
+      <%- partial("_partials/_header") %>
+      <%- partial("_partials/_nav") %>
+      <main>
+        <%- yield %>
+      </main>
+      <%- partial("_partials/_footer") %>
+    </div>
+    <%- partial("_partials/_scripts") %>
+  </body>
+</html>
