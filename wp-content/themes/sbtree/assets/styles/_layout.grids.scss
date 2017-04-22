@@ -74,6 +74,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: stretch;
   > .grid-item {
     padding-left: $pad-double;
     padding-right: $pad-double;
@@ -102,6 +103,7 @@
  * 3 column grid
  */
 .grid--3-col {
+  width: 100%;
   @include media('>medium') {
     width: 100%;
     > * {

@@ -23,6 +23,6 @@
     <p class="font--m color--white stagger"><?php echo $intro; ?></p>
   <?php endif; ?>
   <?php if (is_page('home')): ?>
-    <a href="/contact" class="btn center-block stagger">Get a free estimate</a>
+    <a href="/free-estimate" class="btn center-block stagger">Get a free estimate!</a>
   <?php endif; ?>
 </div>

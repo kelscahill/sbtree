@@ -26,9 +26,9 @@
   </div>
 </section>
 
-<section class="section section-services stagger">
+<section class="section section-services" data-stellar-background-ratio="0.5">
   <div class="section--inner">
-    <div class="grid grid--50-50 ">
+    <div class="grid grid--50-50">
       <div class="grid-item">
         <div class="grid-item--inner text-align--center spacing">
           <div class="grid-item__header">
@@ -36,7 +36,7 @@
             <h2>Tree Removal</h2>
           </div>
           <p>Eliminate dead or diseased trees from your residential or commercial property with tree removal from S&amp;B Tree L.L.C. We deliver the prompt and safe tree removal you need at a price you can afford.</p>
-          <a href="/services#removal" class="btn">View Removal Services</a>
+          <a href="/services" class="btn">View Removal Services</a>
         </div>
       </div>
       <div class="grid-item">
@@ -46,7 +46,7 @@
             <h2>Tree Trimming</h2>
           </div>
           <p>Enjoy the beauty of healthy, clean trees with our tree trimming and yard cleanup services. Our professional arborists prune your overgrown or hazardous trees with care and precision every time.</p>
-          <a href="/services#trimming" class="btn">View Trimming Services</a>
+          <a href="/services" class="btn">View Trimming Services</a>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
               <span class="icon icon--quote icon--quote--left">&ldquo;</span>
               <span class="icon icon--quote icon--quote--right">&rdquo;</span>
             </div>
-            <p class="block__body"><?php echo $testimonial->post_content; ?></p>
+            <p class="block__body color--tan"><?php echo $testimonial->post_content; ?></p>
             <h4 class="font--primary--s block__title"><?php echo $testimonial->post_title; ?></h4>
           </div>
         <?php endforeach; ?>

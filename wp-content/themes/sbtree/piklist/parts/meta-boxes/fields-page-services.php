@@ -15,6 +15,12 @@ piklist('field', array(
   'fields' => array(
     array(
       'type' => 'text',
+      'field' => 'service_row_kicker',
+      'label' => 'Service Row Kicker',
+      'columns' => 12
+    ),
+    array(
+      'type' => 'text',
       'field' => 'service_row_title',
       'label' => 'Service Row Title',
       'columns' => 12
@@ -42,17 +48,6 @@ piklist('field', array(
           'field' => 'service_description',
           'label' => 'Service Description',
           'columns' => 12
-        ),
-        array(
-          'type' => 'file',
-          'field' => 'service_icon',
-          'label' => 'Icon',
-          'columns' => 4,
-          'options' => array(
-            'modal_title' => 'Upload Icon',
-            'button' => 'Add Icon',
-            'max' => 1
-          )
         )
       )
     )

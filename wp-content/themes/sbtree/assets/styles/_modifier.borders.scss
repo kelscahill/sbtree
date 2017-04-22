@@ -8,3 +8,13 @@
 .border {
   border: $border-style;
 }
+
+.hr--small {
+  width: rem(30);
+  height: rem(2);
+  display: block;
+  border: 0;
+  text-align: center;
+  margin: 0 auto;
+  background-color: $gold;
+}

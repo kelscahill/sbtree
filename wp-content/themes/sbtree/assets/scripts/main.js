@@ -72,6 +72,7 @@
 
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
+            $('.nav__primary, .nav-toggler').removeClass('main-nav-is-active');
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
               var target = $(this.hash);
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -119,6 +120,8 @@
           ]
         });
 
+        // Stellar parallax Animations
+        $(window).stellar();
 
         /**
          * Main class toggling function

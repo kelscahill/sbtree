@@ -11,38 +11,41 @@
     <?php
       $service_row_title = $service['service_row_title'];
       $service_row_description = $service['service_row_description'];
+      $service_row_kicker = $service['service_row_kicker'];
       $service_items = $service['services'];
     ?>
     <section id="service--<?php echo $counter; ?>" class="section section-service--<?php echo $counter; ?> stagger">
-      <div class="section--inner layout-container">
+      <div class="section--inner layout-container spacing--double text-align--center">
         <div class="narrow--s center-block spacing">
-          <h2><?php echo $service_row_title; ?></h2>
+          <div class="section__header">
+            <h3 class="color--gold no-spacing"><?php echo $service_row_kicker; ?></h3>
+            <h2><?php echo $service_row_title; ?></h2>
+          </div>
           <p><?php echo $service_row_description; ?></p>
-          <?php if ($service_items): ?>
-            <div class="grid grid--50-50">
-              <?php foreach ($service_items as $service_item): ?>
-              <?php
-                $thumb_id = $service_item['service_icon'][0];
-                $title = $service_item['service_title'];
-                $description = $service_item['service_description'];
-               ?>
-              <div class="grid-item">
-                <?php if ($thumb_id): ?>
-                  <div class="icon icon--l">
-                    <img src="<?php echo wp_get_attachment_image_src($thumb_id, "square--xs")[0]; ?>" alt="<?php echo get_post_meta($thumb_id, '_wp_attachment_image_alt', true); ?>">
-                  </div>
-                <?php endif; ?>
-                <?php if ($title): ?>
-                  <h3><?php echo $title; ?></h3>
-                <?php endif; ?>
-                <?php if ($description): ?>
-                  <p><?php echo $description; ?></p>
-                <?php endif; ?>
-              </div>
-            <?php endforeach; ?>
-            </div>
-          <?php endif; ?>
         </div>
+        <?php if ($service_items): ?>
+          <div class="narrow--l center-block">
+            <div class="grid grid--4-col">
+              <?php foreach ($service_items as $service_item): ?>
+                <?php
+                  $title = $service_item['service_title'];
+                  $description = $service_item['service_description'];
+                 ?>
+                <div class="grid-item block padding">
+                  <div class="block--inner padding spacing">
+                    <?php if ($title): ?>
+                      <h3 class="block__title font--m"><?php echo $title; ?></h3>
+                      <hr class="hr--small">
+                    <?php endif; ?>
+                    <?php if ($description): ?>
+                      <p class="block__excerpt color--tan font--s"><?php echo $description; ?></p>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </section>
   <?php $counter++; endforeach; ?>
@@ -59,3 +62,5 @@
     </div>
   </article>
 <?php endwhile; ?>
+
+<?php get_template_part('patterns/components/section--cta'); ?>

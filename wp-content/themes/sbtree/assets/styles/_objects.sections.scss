@@ -57,7 +57,7 @@
   }
 }
 .section-services {
-  background: url('../../dist/images/background-texture.png') center center no-repeat;
+  background: url('../../dist/images/background-texture.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -90,6 +90,10 @@
   .grid-item {
     z-index: 2;
     &:first-child {
+      margin-bottom: $space-quad;
+      @include media('>large') {
+        margin-bottom: 0;
+      }
       .btn {
         background-color: transparent;
         border: 1px solid $white;
@@ -100,6 +104,10 @@
       }
     }
     &:last-child {
+      margin-top: $space-quad;
+      @include media('>large') {
+        margin-top: 0;
+      }
       .btn {
         background-color: transparent;
         border: 1px solid $white;
@@ -115,38 +123,40 @@
     margin-right: auto;
   }
 }
-.section-testimonials {
-  // background: url('../../dist/images/background-texture.png') center center no-repeat;
-  // background-size: cover;
+
+.section-service--2 {
+  background-color: $black;
 }
 
-.section-service--1,
-.section-service--2 {
-  position: relative;
-  padding-top: rem(300);
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 50%;
-    bottom: rem(-800);
-    margin: auto;
-    width: rem(1600);
-    height: rem(1600);
-    transform: translateX(-50%) scaleY(.2) rotate(45deg);
-    z-index: -1;
+.section--cta {
+  .grid {
+    justify-content: stretch;
   }
-}
-.section-service--1 {
-  z-index: 2;
-  &:after {
-    background-color: $dark-gray;
-  }
-}
-.section-service--2 {
-  z-index: 1;
-  background-color: $green;
-  &:after {
-    background-color: $green;
+  .grid-item {
+    margin-bottom: $space-quad;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: $white;
+      display: table;
+      margin: $space auto 0 auto;
+      border-bottom: 1px solid $white;
+      text-align: center;
+      &:hover {
+        padding-bottom: 5px;
+      }
+    }
+    p {
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media('>medium') {
+      margin-bottom: 0;
+      &:last-child {
+        border: 0;
+      }
+    }
   }
 }

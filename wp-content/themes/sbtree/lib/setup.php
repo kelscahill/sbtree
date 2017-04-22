@@ -136,8 +136,8 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 // Featured crop.
 add_image_size('featured__hero--s', 500, 400, array('center', 'center'));
 add_image_size('featured__hero--m', 800, 500, array('center', 'center'));
-add_image_size('featured__hero--l', 1100, 500, array('center', 'center'));
-add_image_size('featured__hero--xl', 1600, 600, array('center', 'center'));
+add_image_size('featured__hero--l', 1100, 700, array('center', 'center'));
+add_image_size('featured__hero--xl', 1600, 1000, array('center', 'center'));
 
 // 16:9 crop.
 // add_image_size('horiz__16x9--s', 500, 280, array('center', 'center'));
