@@ -7,8 +7,8 @@
     $intro = get_post_meta($post->ID, 'intro', true);
   }
 ?>
-<div class="page-header spacing">
-  <h1 class="font--primary--xl color--tan stagger">
+<div class="page-header spacing inviewable">
+  <h1 class="font--primary--xl color--tan inview-fadeIn">
     <?php if (is_page('home')): ?>
       <span class="icon icon--headline"><?php get_template_part('patterns/components/graphic-headline'); ?></span>
     <?php else: ?>
@@ -20,9 +20,9 @@
     <?php endif; ?>
   </h1>
   <?php if ($intro): ?>
-    <p class="font--m color--white stagger"><?php echo $intro; ?></p>
+    <p class="font--m color--white inview-fadeIn delay-1"><?php echo $intro; ?></p>
   <?php endif; ?>
   <?php if (is_page('home')): ?>
-    <a href="/free-estimate" class="btn center-block stagger">Get a free estimate!</a>
+    <a href="/free-estimate" class="btn center-block inview-fadeIn delay-1">Get a free estimate!</a>
   <?php endif; ?>
 </div>

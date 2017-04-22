@@ -35,41 +35,62 @@
           $('html').addClass(' no-touch');
         }
 
-        // Velocity Page Animations
-				function a() {
-					var a = this.getBoundingClientRect(),
-						b = window.innerHeight || document.documentElement.clientHeight;
-					return a.bottom < 0 || a.top > b
-				}
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
 
-				$(document).on("ready", function() {
-					$('.stagger').filter(a).removeClass('stagger'), $('.stagger').velocity(
-						'transition.fadeIn', {
-							stagger: 40,
-							duration: 1e3,
-							delay: 0,
-							drag: !0
-						})
-				  }), $.Velocity.RegisterEffect('transition.fadeIn', {
-					defaultDuration: 600,
-					calls: [
-						[{
-							opacity: [1, 0],
-							rotateX: [0, -14],
-							translateZ: [0, 100],
-							translateY: [0, 10],
-							scale: [1, .98]
-						}]
-					],
-					reset: {
-						opacity: 1,
-						rotateX: 0,
-						translateZ: 0,
-						translateY: 0,
-						scale: 1
-					}
-				});
+        $(window).scroll(function(event){
+          didScroll = true;
+        });
 
+        setInterval(function() {
+          if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+          }
+        }, 250);
+
+        function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+          // If they scrolled down and are past the navbar, add class .nav-up.
+          // This is necessary so you never see what is "behind" the navbar.
+          if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+          }
+          else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
+            }
+          }
+          lastScrollTop = st;
+        }
+
+        // Animations - inview
+        $('.inviewable').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        	var now = new Date();
+        	var el = $(event.target);
+        	if(isInView) {
+        	  if(!el.hasClass('inview')) {
+          		el.addClass("inview");
+          		el.data('debounce', now.getTime() );
+        	  }
+        	}
+          else {
+        	  if(now.getTime() - el.data('debounce') > 1000) {
+          	  el.removeClass("inview");
+          	}
+          }
+        });
+
+        // Smooth scrolling on anchor clicks
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
             $('.nav__primary, .nav-toggler').removeClass('main-nav-is-active');

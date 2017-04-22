@@ -9,6 +9,57 @@
   @include transition;
 }
 
+//  Animations
+.inviewable {
+  visibility: hidden;
+  &.inview {
+    visibility: visible;
+  }
+}
+
+// Animation Delays
+$staggerTime: 0.25s;
+
+.delay-1, .inviewable.inview.delay-1, .inviewable.inview > .delay-1 {
+  animation-delay: $staggerTime*1;
+}
+.delay-2, .inviewable.inview.delay-2, .inviewable.inview > .delay-2  {
+  animation-delay: $staggerTime*2;
+}
+.delay-3, .inviewable.inview.delay-3, .inviewable.inview > .delay-3 {
+  animation-delay: $staggerTime*3;
+}
+.delay-4, .inviewable.inview.delay-4, .inviewable.inview > .delay-4 {
+  animation-delay: $staggerTime*4;
+}
+.delay-5, .inviewable.inview.delay-5, .inviewable.inview > .delay-5 {
+  animation-delay: $staggerTime*5;
+}
+.delay-6, .inviewable.inview.delay-6, .inviewable.inview > .delay-6 {
+  animation-delay: $staggerTime*6;
+}
+.delay-7, .inviewable.inview.delay-7, .inviewable.inview > .delay-7 {
+  animation-delay: $staggerTime*7;
+}
+.delay-8, .inviewable.inview.delay-8, .inviewable.inview > .delay-8 {
+  animation-delay: $staggerTime*8;
+}
+
+
+@include keyframes(fadeInAnim) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// Animation Effects
+.inview .inview-fadeIn {
+   animation: fadeInAnim 0.5s ease-in 0.0s;
+   animation-fill-mode: both;
+}
+
 // Fade in and slide up from bottom
 .fade-up {
   transform: translateY(40px);

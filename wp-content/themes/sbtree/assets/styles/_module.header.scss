@@ -29,7 +29,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-content: space-between;
   width: 100%;
   @include media('>medium') {
     justify-content: flex-end;
@@ -38,14 +37,21 @@
   p {
     display: flex;
     align-items: center;
-    &:last-child {
-      @include media('>medium') {
-        padding-left: $pad-double;
-      }
+    padding-left: $pad;
+    &:first-child {
+      padding: 0;
+    }
+    @include media('>medium') {
+      padding-left: $pad-double;
     }
   }
   .icon {
     margin-right: rem(5);
+  }
+  .icon--facebook {
+    @include media('<=medium') {
+      margin-right: 0;
+    }
   }
 }
 
@@ -59,6 +65,13 @@
   width: 100%;
   border-bottom: 1px solid $dark-gray;
   background-color: rgba($black, 0.3);
+  transition: top 0.2s ease-in-out;
+  &.nav-up {
+    top: rem(-50);
+    @include media('>medium') {
+      top: rem(-80);
+    }
+  }
 }
 .header__nav {
   height: rem(50);

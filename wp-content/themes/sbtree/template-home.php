@@ -4,10 +4,10 @@
  */
 ?>
 
-<section id="about" class="section section-about stagger">
+<section id="about" class="section section-about">
   <div class="section--inner">
-    <div class="grid grid--50-50">
-      <div class="grid-item">
+    <div class="grid grid--50-50 inviewable">
+      <div class="grid-item inview-fadeIn">
         <div class="grid-item--inner text-align--center spacing">
           <div class="grid-item__header">
             <h3 class="color--gold no-spacing">About</h3>
@@ -17,7 +17,7 @@
           <p>Our customers choose us because we are there to please them. We take great pride in what we do and enjoy all the different aspects the job brings to us. From large tree removal to utility line trimming, there is truly nothing we cannot do.</p>
         </div>
       </div>
-      <div class="grid-item">
+      <div class="grid-item inview-fadeIn delay-1">
         <div class="grid-item--inner circle">
           <img src="http://sbtree.dev/wp-content/uploads/2017/04/trimming.png"/>
         </div>
@@ -29,8 +29,8 @@
 <section class="section section-services" data-stellar-background-ratio="0.5">
   <div class="section--inner">
     <div class="grid grid--50-50">
-      <div class="grid-item">
-        <div class="grid-item--inner text-align--center spacing">
+      <div class="grid-item inviewable">
+        <div class="grid-item--inner text-align--center spacing inview-fadeIn">
           <div class="grid-item__header">
             <h3 class="color--gold no-spacing">Service</h3>
             <h2>Tree Removal</h2>
@@ -39,8 +39,8 @@
           <a href="/services" class="btn">View Removal Services</a>
         </div>
       </div>
-      <div class="grid-item">
-        <div class="grid-item--inner text-align--center spacing">
+      <div class="grid-item inviewable">
+        <div class="grid-item--inner text-align--center spacing inview-fadeIn delay-1">
           <div class="grid-item__header">
             <h3 class="color--gold no-spacing">Service</h3>
             <h2>Tree Trimming</h2>
@@ -60,11 +60,11 @@
   ));
 ?>
 <?php if ($testimonials): ?>
-  <section id="testimonials" class="section section-testimonials spacing stagger">
+  <section id="testimonials" class="section section-testimonials spacing">
     <div class="section--inner spacing">
-      <div class="section-header text-align--center">
-        <h3 class="color--gold no-spacing">Testimonials</h3>
-        <h2>What people are saying</h2>
+      <div class="section-header text-align--center inviewable">
+        <h3 class="color--gold no-spacing inview-fadeIn delay-1">Testimonials</h3>
+        <h2 class="inview-fadeIn">What people are saying</h2>
       </div>
       <div class="testimonials js-slider color--white">
         <?php foreach ($testimonials as $testimonial): ?>

@@ -14,7 +14,7 @@
       $service_row_kicker = $service['service_row_kicker'];
       $service_items = $service['services'];
     ?>
-    <section id="service--<?php echo $counter; ?>" class="section section-service--<?php echo $counter; ?> stagger">
+    <section id="service--<?php echo $counter; ?>" class="section section-service--<?php echo $counter; ?>">
       <div class="section--inner layout-container spacing--double text-align--center">
         <div class="narrow--s center-block spacing">
           <div class="section__header">
@@ -25,13 +25,13 @@
         </div>
         <?php if ($service_items): ?>
           <div class="narrow--l center-block">
-            <div class="grid grid--4-col">
-              <?php foreach ($service_items as $service_item): ?>
+            <div class="grid grid--4-col inviewable">
+              <?php $service_counter = 1; foreach ($service_items as $service_item): ?>
                 <?php
                   $title = $service_item['service_title'];
                   $description = $service_item['service_description'];
                  ?>
-                <div class="grid-item block padding">
+                <div class="grid-item block padding inview-fadeIn delay-<?php echo $service_counter; ?>">
                   <div class="block--inner padding spacing">
                     <?php if ($title): ?>
                       <h3 class="block__title font--m"><?php echo $title; ?></h3>
@@ -42,7 +42,7 @@
                     <?php endif; ?>
                   </div>
                 </div>
-              <?php endforeach; ?>
+              <?php $service_counter++; endforeach; ?>
             </div>
           </div>
         <?php endif; ?>
