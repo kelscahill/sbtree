@@ -15,7 +15,7 @@ ul, ol {
     li {
       list-style: none;
       padding-left: $pad;
-      text-indent: rem(-10);
+      text-indent: rem(-5);
       &:before {
         color: $gold;
         width: rem(10);
@@ -116,8 +116,12 @@ ul {
   .alignright {
     min-width: 50%;
     max-width: 50%;
+    display: none;
+    @include media('>large') {
+      display: block;
+    }
     img {
-      width: 100% ;
+      width: 100%;
     }
   }
   .alignleft {
@@ -129,8 +133,9 @@ ul {
   }
   .alignright {
     float: right;
-    margin: $space-and-half 0 0 $space-and-half;
+    margin: $space-half 0 0 $space-half;
     @include media('>large') {
+      margin: $space-and-half 0 0 $space-and-half;
       margin-right: rem(-80);
     }
   }
