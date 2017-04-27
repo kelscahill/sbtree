@@ -145,11 +145,11 @@ add_image_size('featured__hero--xl', 1600, 1000, array('center', 'center'));
 // add_image_size('horiz__16x9--l', 1100, 620, array('center', 'center'));
 //add_image_size('horiz__16x9--xl', 1600, 900, array('center', 'center'));
 
-// 4:3 crop.
-// add_image_size('horiz__4x3--s', 500, 375, array('center', 'center'));
-// add_image_size('horiz__4x3--m', 800, 600, array('center', 'center'));
-// add_image_size('horiz__4x3--l', 1100, 825, array('center', 'center'));
-//add_image_size('horiz__4x3--xl', 1600, 1200, array('center', 'center'));
+// 3:4 crop.
+add_image_size('vert__3x4--s', 375, 600, array('center', 'center'));
+add_image_size('vert__3x4--m', 600, 800, array('center', 'center'));
+add_image_size('vert__3x4--l', 825, 1100, array('center', 'center'));
+//add_image_size('vert__3x4--xl', 1600, 1200, array('center', 'center'));
 
 
 // square crop.

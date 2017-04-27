@@ -38,16 +38,16 @@
     }
     // Meta Image
     if ($thumb_id) {
-      $image = wp_get_attachment_image_src($thumb_id, "horiz__16x9--l")[0];
+      $image = wp_get_attachment_image_src($thumb_id, "featured__hero--m")[0];
     } else {
-      $image = get_template_directory_uri() . '/dist/images/meta-og.png';
+      $image = get_template_directory_uri() . '/dist/images/meta-og.jpg';
     }
   ?>
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="<?php the_title(); ?>" />
   <meta name="twitter:description" content="<?php echo $description; ?>" />
-  <meta name="twitter:creator" content="@" />
+  <meta name="twitter:creator" content="@sbtreellc" />
   <meta name="twitter:image" content="<?php echo $image; ?>" />
 
   <!-- Open Graph data -->
@@ -56,7 +56,7 @@
   <meta property="og:title" content="<?php the_title(); ?>" />
   <meta property="og:description" content="<?php echo $description; ?>" />
   <meta property="og:url" content="<?php the_permalink(); ?>" />
-  <meta property="og:site_name" content="Old Ellicot City" />
+  <meta property="og:site_name" content="S&amp;B Tree LLC." />
   <meta property="og:image" content="<?php echo $image; ?>" />
 
   <?php wp_head(); ?>

@@ -16,7 +16,7 @@
       <div class="grid-item spacing inview-fadeIn delay-2">
         <span class="icon icon--m path-fill--tan"><?php get_template_part('patterns/icons/icon-firewood'); ?></span>
         <h4 class="">Seasoned Firewood</h4>
-        <p class="color--tan">Look for seasoned firewood to heat your home during the winter months?</p>
+        <p class="color--tan">Looking for seasoned firewood to heat your home during the winter months?</p>
         <a href="<?php echo get_home_url(); ?>/contact">Contact us today</a>
       </div>
     </div>

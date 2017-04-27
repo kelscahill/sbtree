@@ -24,7 +24,7 @@
             <path d="M20.6,0H1.4A1.37,1.37,0,0,0,0,1.4V20.6A1.37,1.37,0,0,0,1.4,22H11.8V13.4H9V10.2h2.8V7.5c0-2.5,1.5-4.2,4.5-4.2a9,9,0,0,1,2.3.2V6.4H16.5a1.24,1.24,0,0,0-1.4,1.1v2.8h3.2l-.5,3.2H15V22h5.5a1.37,1.37,0,0,0,1.4-1.4V1.4A1.24,1.24,0,0,0,20.6,0Z"/>
           </svg>
         </a>
-        <a href="https://www.facebook.com/sbtree" class="hide-until--m" target="_blank">
+        <a href="https://www.facebook.com/sbtreellc" class="hide-until--m" target="_blank">
           <span class="color--tan">Like us on Facebook!</span>
         </a>
       </p>
@@ -48,11 +48,11 @@
     <?php if ($thumb_id): ?>
       <style>
         .background-image--<?php echo $thumb_id; ?> {
-          background-image: url(<?php echo wp_get_attachment_image_src($thumb_id, "featured__hero--s")[0]; ?>);
+          background-image: url(<?php echo wp_get_attachment_image_src($thumb_id, "vert__3x4--s")[0]; ?>);
         }
         @media (min-width: 500px) {
           .background-image--<?php echo $thumb_id; ?> {
-            background-image: url(<?php echo wp_get_attachment_image_src($thumb_id, "featured__hero--m")[0]; ?>);
+            background-image: url(<?php echo wp_get_attachment_image_src($thumb_id, "vert__3x4--m")[0]; ?>);
           }
         }
         @media (min-width: 800px) {

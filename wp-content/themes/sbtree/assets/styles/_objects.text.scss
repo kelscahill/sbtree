@@ -7,8 +7,8 @@
 
 // Text Primary
 @mixin font--primary--xl() {
-  font-size: rem(35);
-  line-height: rem(35);
+  font-size: rem(50);
+  line-height: rem(50);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: $font-primary;
@@ -22,8 +22,8 @@ h1, .font--primary--xl {
 }
 
 @mixin font--primary--l() {
-  font-size: rem(30);
-  line-height: rem(30);
+  font-size: rem(35);
+  line-height: rem(35);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: $font-primary;
@@ -37,8 +37,8 @@ h2, .font--primary--l {
 }
 
 @mixin font--primary--m() {
-  font-size: rem(20);
-  line-height: rem(24);
+  font-size: rem(25);
+  line-height: rem(30);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: $font-primary;
@@ -52,8 +52,8 @@ h3, .font--primary--m {
 }
 
 @mixin font--primary--s() {
-  font-size: rem(16);
-  line-height: rem(20);
+  font-size: rem(22);
+  line-height: rem(28);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-family: $font-primary;

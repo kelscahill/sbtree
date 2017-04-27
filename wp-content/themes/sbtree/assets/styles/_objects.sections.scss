@@ -5,12 +5,13 @@
 .banner {
   display: block;
   height: rem(500);
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
   @include media('>medium') {
     height: rem(700);
+    background-size: cover;
   }
   &:after {
     content: "";
@@ -20,6 +21,7 @@
     height: rem(200);
     bottom: 0;
     position: absolute;
+    pointer-events: none;
   }
 }
 .banner--inner {

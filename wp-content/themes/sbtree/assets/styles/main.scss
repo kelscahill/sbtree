@@ -71,7 +71,7 @@ $output-bourbon-deprecation-warnings: false !default;
 \*------------------------------------*/
 @import "tools.mixins";
 @import "tools.include-media";
-$tests: true;
+$tests: false;
 @import "tools.mq-tests";
 
 

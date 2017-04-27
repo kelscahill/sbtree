@@ -99,9 +99,9 @@ form {
     display: none;
   }
 }
-
-.wpcf7-list-item {
+.wpcf7-checkbox span.wpcf7-list-item {
   display: block;
   margin-top: $space-half;
   color: $tan;
+  width: 100%;
 }

@@ -101,6 +101,9 @@ $slice-height: 3;
     padding: $pad;
     @include media('>medium') {
       display: inline-block;
+      &:last-child {
+        padding-right: 0;
+      }
     }
     a {
       @include font--primary--s;
@@ -108,9 +111,6 @@ $slice-height: 3;
       &:hover {
         color: $gold;
       }
-    }
-    &:last-child {
-      padding-right: 0;
     }
   }
 }
