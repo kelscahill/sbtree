@@ -142,7 +142,10 @@
         });
 
         // Stellar parallax Animations
-        $(window).stellar();
+        if (!isMobile()) {
+          $(window).stellar();
+        }
+
 
         /**
          * Main class toggling function
