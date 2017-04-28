@@ -78,6 +78,7 @@
           </div>
         <?php endforeach; ?>
       </div>
+      <a href="<?php echo get_home_url(); ?>/write-a-review" class="btn center-block">Write a review</a>
     </div>
   </section>
 <?php endif; ?>
